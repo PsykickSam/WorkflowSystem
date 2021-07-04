@@ -1,0 +1,105 @@
+.grid-form-main {
+  height: 85vh;
+  overflow-y: scroll;
+}
+
+.grid-form-main::-webkit-scrollbar {
+  display: block;
+}
+
+/* width */
+.grid-form-main::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 50px;
+}
+
+/* Track */
+.grid-form-main::-webkit-scrollbar-track {
+  background: #eee;
+  border-radius: 50px;
+}
+
+/* Handle */
+.grid-form-main::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+.grid-form-main::-webkit-scrollbar-thumb:hover {
+  background: #ccc;
+  border-radius: 50px;
+}
+
+.form-title {
+  font-size: 40px;
+}
+
+.form-question {
+  font-size: 28px;
+  margin: 0;
+}
+
+.form-text {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.form-check-list .check-list {
+  list-style-type: none;
+}
+
+.form-check {
+
+}
+
+.form-radio-list .radio-list {
+  list-style-type: none;
+}
+
+.form-radio {
+
+}
+
+.form-radio-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-radio-button {
+
+}
+
+.form-item-component {
+  margin: 8px 0;
+}
+
+.form-item {
+  border: 1px solid transparent !important;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+.form-item-cover > * {
+  pointer-events: none;
+}
+
+.form-item-hover:hover {
+  border: 1px solid lightgray !important;
+  border-radius: 10px;
+}
+
+.form-item-selected {
+  border: 1px solid black !important;
+  border-radius: 10px;
+}
+
+.form-item-deselected {
+  border: 1px solid transparent !important;
+  border-radius: 10px;
+}

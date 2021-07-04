@@ -1,0 +1,69 @@
+.extra-margin-4 {
+  margin: 4px !important;
+}
+
+.extra-padding-4 {
+  padding: 4px !important;
+}
+
+.container {
+  padding: 1rem;
+  height: calc(100vh - 64px);
+}
+
+.container-card {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.container-card-content {
+  max-height: 100%;
+  overflow: auto;
+}
+
+.container-card-content::-webkit-scrollbar {
+  display: none;
+}
+
+
+.mat-icon {
+  vertical-align: middle;
+}
+
+// .new-form {
+
+// }
+
+.new-form-full-width {
+  width: 100%;
+}
+
+.new-form-btn {
+  margin-top: 16px;
+}
+
+table {
+  width: 100%;
+}
+
+table,
+table th {
+  text-align: center !important;
+}
+
+.float-right {
+  float: right;
+}
+
+.zero-padding {
+  padding: 0 !important;
+}
+
+#grid-form {
+  overflow-y: scroll;
+}
+
+.draft-table-style {
+  background-color: transparent;
+}

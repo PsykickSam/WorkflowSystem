@@ -1,0 +1,57 @@
+<div class="container">
+  <mat-card class="container-card">
+    <mat-card-content>
+      <div fxFill fxLayout="row" fxLayoutAlign="end end" fxLayoutGap="1.5rem">
+        <button mat-raised-button color="warn" class="delete-workflow-button">
+          <mat-icon inline>remove_circle_outline</mat-icon>
+          <span translate>Delete Workflow</span>
+        </button>
+
+        <a mat-raised-button color="primary" class="new-workflow-button" href="/workflow/new">
+          <mat-icon inline>add_circle_outline</mat-icon>
+          <span translate>New Workflow</span>
+        </a>
+      </div>
+      <br />
+
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z3">
+        <ng-container matColumnDef="workflowId">
+          <th mat-header-cell *matHeaderCellDef translate>Workflow Id</th>
+          <td mat-cell *matCellDef="let element">{{ element.workflowId }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="username">
+          <th mat-header-cell *matHeaderCellDef translate>Username</th>
+          <td mat-cell *matCellDef="let element">{{ element.username }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="groupId">
+          <th mat-header-cell *matHeaderCellDef translate>Group Id</th>
+          <td mat-cell *matCellDef="let element">{{ element.groupId }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="createdAt">
+          <th mat-header-cell *matHeaderCellDef translate>Created At</th>
+          <td mat-cell *matCellDef="let element">{{ element.createdAt }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="isActive">
+          <th mat-header-cell *matHeaderCellDef translate>IsActive</th>
+          <td mat-cell *matCellDef="let element">{{ element.isActive }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="isAdmin">
+          <th mat-header-cell *matHeaderCellDef translate>IsAdmin</th>
+          <td mat-cell *matCellDef="let element">{{ element.isAdmin }}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+
+      <section class="table-paginator">
+        <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+      </section>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,21 @@
+.container {
+  padding: 1rem;
+  height: calc(100vh - 64px);
+}
+
+.container-card {
+  height: 100%;
+}
+
+.container-card-content::-webkit-scrollbar {
+  display: none;
+}
+
+table {
+  width: 100%;
+}
+
+.new-workform-button {
+  background: linear-gradient(45deg, rgba(#5ab9ea, 1), rgba(#5680e9, 1));
+  color: white;
+}

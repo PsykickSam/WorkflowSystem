@@ -1,0 +1,61 @@
+.container {
+  padding: 1rem;
+  height: calc(100vh - 64px);
+}
+
+.container-card {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.container-card-content {
+  overflow: auto;
+}
+
+.container-card-content::-webkit-scrollbar {
+  display: none;
+}
+
+.info-div {
+  min-height: 400px !important;
+}
+
+.info-card {
+  min-height: 400px !important;
+  margin: 4px;
+}
+
+.info-card-table {
+  margin: 4px;
+}
+
+.info-content-image {
+  font-size: 8 * 24px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 24px;
+  color: rgba($color: #000000, $alpha: 0.3);
+  user-select: none;
+}
+
+.info-content-counter {
+  font-size: 8 * 18px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0px !important;
+  margin-top: 24px !important;
+  margin-left: 24px !important;
+  color: rgba($color: #000000, $alpha: 0.3);
+  user-select: none;
+}
+
+table {
+  width: 100%;
+  margin-top: 24px;
+}
+
+// TODO: Responsive Media Query

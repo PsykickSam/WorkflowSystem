@@ -1,0 +1,115 @@
+@import "src/theme/theme-variables";
+
+$circle-size-big: 200px;
+$circle-size-medium: 150px;
+$circle-size-small: 30px;
+
+:host {
+  display: flex;
+  flex: 1;
+  background-color: #f5f5f5;
+}
+
+.inline-loader {
+  display: inline-block;
+}
+
+.version {
+  margin: 0;
+}
+
+.register-container,
+.mat-form-field {
+  width: 100%;
+}
+
+.register-fields > :not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.register-error {
+  color: mat-color($app-warn);
+}
+
+.span-space-wrap {
+  white-space: pre-wrap;
+}
+
+.register-bg  {
+  background: white;
+}
+
+.register-text {
+  font-weight: bold;
+}
+
+.bottom-bar {
+  width: 65px;
+  height: 3px;
+  border-radius: 25px;
+  background: linear-gradient(to left top, #E079B2, #F8A78B, #FAB345);
+}
+
+.register-button {
+  color: white !important;
+  background: linear-gradient(45deg, #F970AD, #9E85F0);
+}
+
+.forget-password {
+  color: #F970AD;
+  cursor: pointer;
+}
+
+.forget-password:hover {
+  text-decoration: underline;
+}
+
+.forget-password-container p {
+  line-height: 5px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.abstract .wave {
+  position: absolute;
+  width: 600px;
+  height: 350px;
+  right: 0;
+  background-color: rgba($color: #D575CF, $alpha: 0.8);
+  z-index: 100;
+  clip-path: polygon(100% 0%, 100% 100%, 70% 50%, 0% 0%);
+}
+
+.abstract .circle-big {
+  border-bottom-left-radius: $circle-size-big * 2;
+  border-top-left-radius: $circle-size-big * 2;
+  width: $circle-size-big;
+  height: $circle-size-big * 2;
+  position: absolute;
+  background-color: #2EDCFE;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.abstract .circle-medium {
+  background-color: rgba($color: #FFB842, $alpha: 0.9);
+  width: $circle-size-medium;
+  height: $circle-size-medium;
+  position: absolute;
+  border-radius: 50%;
+  top: 55%;
+  right: 7%;
+  transform: translateY(-50%);
+}
+
+.abstract .circle-small {
+  background-color: rgba($color: #21E8FF, $alpha: 1.0);
+  width: $circle-size-small;
+  height: $circle-size-small;
+  position: absolute;
+  border-radius: 50%;
+  top: 75%;
+  right: 10%;
+  transform: translateY(-50%);
+}

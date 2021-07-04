@@ -1,0 +1,51 @@
+:host {
+  display: flex;
+  flex: 1;
+}
+
+.mat-sidenav {
+  min-width: 270px;
+  max-width: 28%;
+}
+
+.has-border {
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.mat-list {
+  padding-top: 0;
+}
+
+.mat-list-item:not(.sidenav-title) {
+  text-decoration: none;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+}
+
+.menu-button {
+  margin-right: 1rem;
+}
+
+.toolbar-left {
+  background: rgba(#84ceeb, 1);
+  color: white;
+}
+
+.toolbar-right {
+  background: linear-gradient(45deg, rgba(#84ceeb, 1), rgba(#5ab9ea, 1), rgba(#8060d0, 1));
+  color: white;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.sidenav-title {
+  cursor: default;
+}
+
+.sidenav-contents * {
+  padding-left: 8px;
+}

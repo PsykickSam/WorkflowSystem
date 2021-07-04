@@ -1,0 +1,132 @@
+<div class="container">
+  <mat-card>
+    <mat-card-content fxFlex>
+      <mat-grid-list cols="14" rowHeight="100vh">
+        <!--  -->
+        <mat-grid-tile colspan="2">
+          <mat-list>
+            <mat-list-item> <h2>Tools</h2> </mat-list-item>
+            <mat-list-item> <small> Basic tools</small> </mat-list-item>
+            <mat-list-item>
+              <button mat-button (click)="createTextComponent()">Text</button>
+              <button mat-button class="icon-btn" disabled><mat-icon [inline]></mat-icon></button>
+            </mat-list-item>
+            <mat-list-item>
+              <button mat-button (click)="createCheckComponent()">Check</button>
+              <button mat-button class="icon-btn"><mat-icon [inline]>add_circle_outline</mat-icon></button>
+            </mat-list-item>
+            <mat-list-item>
+              <button mat-button (click)="createRadioComponent()">Radio</button>
+              <button mat-button class="icon-btn"><mat-icon [inline]>add_circle_outline</mat-icon></button>
+            </mat-list-item>
+
+            <mat-list-item> <h2>Options</h2> </mat-list-item>
+            <mat-list-item> <small>Visible in the form</small> </mat-list-item>
+            <mat-list-item> <mat-checkbox> File Upload </mat-checkbox> </mat-list-item>
+            <mat-list-item> <mat-checkbox> Show Workflow </mat-checkbox> </mat-list-item>
+            <mat-list-item> <mat-checkbox> View Detail </mat-checkbox> </mat-list-item>
+
+            <mat-list-item> <h2>Others</h2> </mat-list-item>
+            <mat-list-item> <small>Some common functions</small> </mat-list-item>
+            <mat-list-item>
+              <button mat-stroked-button>
+                <mat-icon [inline]>visibility</mat-icon>
+                <span>Preview</span>
+              </button>
+            </mat-list-item>
+            <mat-list-item>
+              <button mat-stroked-button>
+                <mat-icon [inline]>get_app</mat-icon>
+                <span>Download</span>
+              </button>
+            </mat-list-item>
+          </mat-list>
+        </mat-grid-tile>
+
+        <!--  -->
+        <mat-grid-tile colspan="9">
+          <div class="grid-form">
+            <!-- Title -->
+            <section class="grid-form-title">
+              <section #gridFormTitle></section>
+            </section>
+
+            <!-- Form -->
+            <section class="grid-form-main">
+              <section #gridFormMain hidden></section>
+              <!-- Text -->
+              <!-- <section class="form-item">
+                <h3 class="form-item-component form-question">Question</h3>
+                <input placeholder="Answer" class="form-item-component form-text">
+              </section> -->
+
+              <!-- Checkbox -->
+              <!-- <section class="form-item">
+                <h3 class="form-item-component form-question">Question</h3>
+                <div>
+                  <mat-checkbox class="form-item-component form-check">Check me!</mat-checkbox>
+                </div>
+              </section> -->
+
+              <!-- Radio -->
+              <!-- <section class="form-item">
+                <h3 class="form-item-component form-question">Question</h3>
+                <div>
+                  <mat-radio-group class="form-item-component form-radio-group">
+                    <mat-radio-button class="form-item-component form-radio-button" value="1">Option 1</mat-radio-button>
+                    <mat-radio-button class="form-item-component form-radio-button" value="2">Option 2</mat-radio-button>
+                  </mat-radio-group>
+                </div>
+              </section> -->
+            </section>
+          </div>
+        </mat-grid-tile>
+
+        <!--  -->
+        <mat-grid-tile colspan="3">
+          <div layout="column">
+            <!-- Workflow List -->
+            <mat-list>
+              <mat-list-item> <h2>Editor</h2> </mat-list-item>
+              <mat-list-item> <small>Basic editing tools</small> </mat-list-item>
+              <mat-list-item>
+                <button mat-button>
+                  <mat-icon [inline]>adjust</mat-icon>
+                  <span>Edit</span>
+                </button>
+              </mat-list-item>
+              <mat-list-item>
+                <button mat-button>
+                  <mat-icon [inline]>cancel</mat-icon>
+                  <span>Delete</span>
+                </button>
+              </mat-list-item>
+
+              <mat-list-item> <h2>Move</h2> </mat-list-item>
+              <mat-list-item> <small>Moving tools</small> </mat-list-item>
+              <mat-list-item>
+                <button mat-button class="move-btn">
+                  <mat-icon [inline]>arrow_upward</mat-icon>
+                </button>
+              </mat-list-item>
+              <mat-list-item>
+                <button mat-button class="move-btn">
+                  <mat-icon [inline]>arrow_downward</mat-icon>
+                </button>
+              </mat-list-item>
+
+              <mat-list-item> <h2>Workflows</h2> </mat-list-item>
+              <mat-list-item> <small>Choose workflow</small> </mat-list-item>
+              <mat-radio-group>
+                <button mat-stroked-button>
+                  <mat-icon [inline]>account_tree</mat-icon>
+                  <span>Workflows</span>
+                </button>
+              </mat-radio-group>
+            </mat-list>
+          </div>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </mat-card-content>
+  </mat-card>
+</div>

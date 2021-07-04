@@ -1,0 +1,15 @@
+<section>
+  <h1 mat-dialog-title translate>Question Title</h1>
+
+  <form class="question-title-form">
+    <mat-form-field>
+      <mat-label translate>Question Title</mat-label>
+      <input matInput [(ngModel)]="data.question" placeholder="Ex. Question 1?" name="question">
+    </mat-form-field>
+  </form>
+
+  <div mat-dialog-actions>
+    <button mat-button (click)="onCancelClick()" cdkFocusInitial translate>Cancel</button>
+    <button mat-button [mat-dialog-close]="data.question" [disabled]="data.question == null || data.question == ''" translate>Ok</button>
+  </div>
+</section>

@@ -1,0 +1,47 @@
+.container {
+  text-align: center;
+  padding: 1rem;
+}
+
+.mat-icon-btn {
+  width: 100%;
+  height: 50px;
+  text-align: left;
+}
+
+.mat-icon-btn.new mat-icon {
+  color: #5ab9ea;
+}
+
+.mat-icon-btn.edit mat-icon {
+  color: #5680e9;
+}
+
+.mat-icon-btn.remove mat-icon {
+  color: #f44336;
+}
+
+mat-grid-tile {
+  background: white;
+}
+
+mat-grid-list {
+  min-height: 100%;
+}
+
+.grid-flow {
+  background-color: whitesmoke;
+  text-align: left;
+  width: 100%;
+  height: 100%;
+}
+
+.icon-btn {
+  text-align: center !important;
+  margin-left: 10px;
+}
+
+.grid-view {
+  padding: 0 !important;
+  margin: 0 !important;
+}

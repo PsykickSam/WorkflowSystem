@@ -1,0 +1,27 @@
+mat-dialog-content::-webkit-scrollbar {
+  display: block;
+}
+
+/* width */
+mat-dialog-content::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 50px;
+}
+
+/* Track */
+mat-dialog-content::-webkit-scrollbar-track {
+  background: #eee;
+  border-radius: 50px;
+}
+
+/* Handle */
+mat-dialog-content::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+mat-dialog-content::-webkit-scrollbar-thumb:hover {
+  background: #ccc;
+  border-radius: 50px;
+}
