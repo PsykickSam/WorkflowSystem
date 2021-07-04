@@ -1,0 +1,76 @@
+<div class="container">
+  <mat-card>
+    <mat-card-content fxFlex>
+      <mat-grid-list cols="12" rowHeight="100vh">
+        <!--  -->
+        <mat-grid-tile colspan="10">
+          <div class="grid-flow">
+            <!-- Flow -->
+            <section class="grid-flow-main">
+              <section>
+                <section class="workflow-item-container">
+                  <div class="workflow-start flow-item"></div>
+                </section>
+                <div class="workflow-item-line"></div>
+                <div #gridFlowMain hidden></div>
+
+                <!-- Item -->
+                <!-- <section class="workflow-item-container">
+                  <div class="workflow-item flow-item">
+                    <p>User 1</p>
+                  </div>
+                </section>
+
+                <div class="workflow-item-line"></div> -->
+
+                <section class="workflow-item-container">
+                  <div class="workflow-end flow-item"></div>
+                </section>
+              </section>
+            </section>
+          </div>
+        </mat-grid-tile>
+
+        <!--  -->
+        <mat-grid-tile colspan="2">
+          <div layout="column">
+            <!-- Workflow List -->
+            <mat-list>
+              <!-- Editor -->
+              <mat-list-item> <h2>Editor</h2> </mat-list-item>
+              <mat-list-item> <small>Component editing tools</small> </mat-list-item>
+              <mat-list-item>
+                <button mat-button class="mat-icon-btn new" (click)="createBlockLineComponent()">
+                  <mat-icon>add_circle_outline</mat-icon>
+                  <span translate>New Component</span>
+                </button>
+              </mat-list-item>
+              <mat-list-item>
+                <button mat-button class="mat-icon-btn edit" (click)="editBlockLineComponent()">
+                  <mat-icon>adjust</mat-icon>
+                  <span translate>Edit Component</span>
+                </button>
+              </mat-list-item>
+              <mat-list-item>
+                <button mat-button class="mat-icon-btn remove" (click)="removeBlockLineComponent()">
+                  <mat-icon>remove_circle_outline</mat-icon>
+                  <span translate>Remove Component</span>
+                </button>
+              </mat-list-item>
+
+              <!-- Others -->
+              <mat-list-item> <h2>Others</h2> </mat-list-item>
+              <mat-list-item> <small>Basic misc options</small> </mat-list-item>
+              <mat-list-item>
+                <button mat-stroked-button>
+                  <mat-icon [inline]>get_app</mat-icon>
+                  <span>Download</span>
+                </button>
+              </mat-list-item>
+            </mat-list>
+          </div>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </mat-card-content>
+  </mat-card>
+</div>

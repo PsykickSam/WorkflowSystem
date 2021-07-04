@@ -1,0 +1,18 @@
+Technology
+
+1. Angular 
+2. Django / Node Typescript (Not decided)
+3. SQL / NoSQL (Not decided)
+
+Work
+
+1. Login
+2. Register
+3. User Dashboard (Normal User)
+4. Admin Dashboard (Depertment User)
+5. Workflow
+6. Workform
+7. Workflow Editor
+8. Workform Editor
+9. Request
+10. Forms

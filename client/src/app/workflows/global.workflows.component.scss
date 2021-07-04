@@ -1,0 +1,96 @@
+//
+.grid-flow-main {
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.grid-flow-main::-webkit-scrollbar {
+  display: block;
+}
+
+/* width */
+.grid-flow-main::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 50px;
+}
+
+/* Track */
+.grid-flow-main::-webkit-scrollbar-track {
+  background: #eee;
+  border-radius: 50px;
+}
+
+/* Handle */
+.grid-flow-main::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+.grid-flow-main::-webkit-scrollbar-thumb:hover {
+  background: #ccc;
+  border-radius: 50px;
+}
+
+// Flow Diagram
+.grid-flow-main section,
+.workflow-item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.workflow-start {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #272727;
+}
+
+.workflow-item {
+  min-width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  border: 2px solid #272727;
+}
+
+.workflow-item-line {
+  width: 2px;
+  height: 40px;
+  background-color: #272727;
+}
+
+.workflow-end {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #272727;
+}
+
+.flow-item {
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.flow-item-cover {
+  pointer-events: none;
+}
+
+.flow-item:hover {
+  background: #cacaca;
+  border-color: #272727;
+}
+
+.flow-item-selected > .flow-item {
+  color: ghostwhite;
+  background: #272727;
+  border-color: #272727;
+}
+
+.workflow-item-container {
+  margin: 0 !important;
+  padding: 0 !important;
+}

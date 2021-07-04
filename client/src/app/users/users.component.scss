@@ -1,0 +1,36 @@
+.container {
+  padding: 1rem;
+  height: calc(100vh - 64px);
+}
+
+.container-card {
+  height: 100%;
+}
+
+table {
+  width: 100%;  
+}
+
+.invite-user-button {
+  background: linear-gradient(45deg, rgba(#84ceeb, 1), rgba(#5ab9ea, 1), rgba(#8060d0, 1));
+  color: white;
+  padding: 0 50px;
+  margin-left: 25px;
+}
+
+.new-user-button {
+  background: linear-gradient(45deg, rgba(#5ab9ea, 1), rgba(#5680e9, 1));
+  width: 130px;
+  color: white;
+}
+
+.edit-user-button {
+  background: linear-gradient(45deg, rgba(#84ceeb, 1), rgba(#5ab9ea, 1));
+  width: 130px;
+  color: white;
+}
+
+.delete-user-button {
+  width: 130px;
+}
+

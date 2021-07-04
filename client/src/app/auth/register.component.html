@@ -1,0 +1,59 @@
+<div fxFill class="mat-typography register-bg">
+  <div class="abstract">
+    <div class="wave"></div>
+    <div class="circle-big"></div>
+    <div class="circle-medium"></div>
+    <div class="circle-small"></div>
+  </div>
+  <div fxFill fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="1.5rem">
+    <div class="register-container" fxLayout="row" fxLayoutAlign="center">
+      <mat-card fxFlex="90%" fxFlex.sm="61%" fxFlex.md="45%" fxFlex.gt-md="28%" class="register-box">
+        <div fxLayout="column" fxLayoutAlign="center center">
+          <h1 fxLayoutAlign="center" translate class="register-text">Register</h1>
+          <div class="bottom-bar"></div>
+        </div>
+        <br>
+
+        <form (ngSubmit)="register()" [formGroup]="registerForm" novalidate>
+          <div class="register-error" [hidden]="!error || isLoading" translate>Username or password incorrect.</div>
+          <br />
+          <div class="register-fields" fxLayout="column">
+            <mat-form-field [hideRequiredMarker]="true">
+              <input
+                type="text"
+                matInput
+                formControlName="username"
+                autocomplete="username"
+                [placeholder]="'Username' | translate"
+                required
+              />
+              <mat-error *ngIf="registerForm.controls.username.invalid && registerForm.controls.username.touched">
+                <span translate>Username is required</span>
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field [hideRequiredMarker]="true">
+              <input
+                type="password"
+                matInput
+                formControlName="password"
+                autocomplete="current-password"
+                [placeholder]="'Password' | translate"
+                required
+              />
+              <mat-error *ngIf="registerForm.controls.password.invalid && registerForm.controls.password.touched">
+                <span translate>Password is required</span>
+              </mat-error>
+            </mat-form-field>
+            <br />
+            <button mat-raised-button class="register-button" type="submit" [disabled]="registerForm.invalid || isLoading">
+              <app-loader class="inline-loader" [isLoading]="isLoading"></app-loader>
+
+              <mat-icon inline>person</mat-icon>
+              <span translate>Register</span>
+            </button>
+          </div>
+        </form>
+      </mat-card>
+    </div>
+  </div>
+</div>

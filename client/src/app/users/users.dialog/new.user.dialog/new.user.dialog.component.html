@@ -1,0 +1,65 @@
+<section>
+  <h1 mat-dialog-title translate>New User</h1>
+
+  <form class="new-user-form">
+    <mat-form-field appearance="standard">
+      <mat-label translate>Enter First Name</mat-label>
+      <input matInput placeholder="Ex. John" name="firstname">
+    </mat-form-field>
+    <mat-form-field appearance="standard">
+      <mat-label translate>Enter Last Name</mat-label>
+      <input matInput placeholder="Ex. Doe" name="lastname">
+    </mat-form-field>
+
+    <mat-form-field appearance="standard">
+      <mat-label translate>Enter Username</mat-label>
+      <input matInput placeholder="Ex. john_doe" name="username">
+    </mat-form-field>
+    <mat-form-field appearance="standard">
+      <mat-label translate>Enter Email</mat-label>
+      <input matInput placeholder="Ex. john@doe.com" name="email">
+    </mat-form-field>
+
+    <mat-form-field appearance="standard">
+      <mat-label translate>Enter Phone</mat-label>
+      <input matInput placeholder="Ex. john@doe.com" name="phone">
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field appearance="standard">
+      <mat-label>Select Role</mat-label>
+      <mat-select select="role">
+        <mat-option value="1">Super Admin</mat-option>
+        <mat-option value="2">Admin</mat-option>
+        <mat-option value="3">Boss</mat-option>
+        <mat-option value="4">Employee</mat-option>
+        <mat-option value="5">User</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="standard">
+      <mat-label>Select Department</mat-label>
+      <mat-select name="department">
+        <mat-option value="1">System</mat-option>
+        <mat-option value="2">Accounts</mat-option>
+        <mat-option value="3">Reception</mat-option>
+        <mat-option value="4">Sales</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field appearance="standard">
+      <mat-label translate>Enter Password</mat-label>
+      <input matInput placeholder="Ex. ******" name="password">
+    </mat-form-field>
+    <mat-form-field appearance="standard">
+      <mat-label translate>Confirm Password</mat-label>
+      <input matInput placeholder="Ex. ******" name="confirm_password">
+    </mat-form-field>
+  </form>
+
+  <div mat-dialog-actions>
+    <button mat-button translate>Ok</button>
+  </div>
+</section>

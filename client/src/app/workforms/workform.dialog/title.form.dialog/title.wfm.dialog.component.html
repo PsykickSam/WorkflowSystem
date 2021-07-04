@@ -1,0 +1,14 @@
+<section>
+  <h1 mat-dialog-title>Title</h1>
+
+  <form class="title-form">
+    <mat-form-field>
+      <mat-label>Form Title</mat-label>
+      <input matInput [(ngModel)]="data.title" placeholder="Ex. Form 1" name="title">
+    </mat-form-field>
+  </form>
+
+  <div mat-dialog-actions>
+    <button mat-button [mat-dialog-close]="data.title" [disabled]="data.title == null || data.title == ''">Ok</button>
+  </div>
+</section>

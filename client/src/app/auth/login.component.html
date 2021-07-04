@@ -1,0 +1,67 @@
+<div fxFill class="mat-typography login-bg">
+  <div class="abstract">
+    <div class="wave"></div>
+    <div class="circle-big"></div>
+    <div class="circle-medium"></div>
+    <div class="circle-small"></div>
+  </div>
+  <div fxFill fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="1.5rem">
+    <div class="login-container" fxLayout="row" fxLayoutAlign="center">
+      <mat-card fxFlex="90%" fxFlex.sm="61%" fxFlex.md="45%" fxFlex.gt-md="28%" class="login-box">
+        <div fxLayout="column" fxLayoutAlign="center center">
+          <h1 fxLayoutAlign="center" translate class="login-text">Login</h1>
+          <div class="bottom-bar"></div>
+        </div>
+        <br>
+
+        <div class="forget-password-container">
+          <p fxLayoutAlign="center" translate>Login Welcome</p>
+          <p fxLayoutAlign="center">
+            <span class="span-space-wrap" translate>Did you</span><span class="forget-password" translate>Forget Password</span>
+          </p>  
+        </div>
+        <br>
+
+        <form (ngSubmit)="login()" [formGroup]="loginForm" novalidate>
+          <div class="login-error" [hidden]="!error || isLoading" translate>Username or password incorrect.</div>
+          <br />
+          <div class="login-fields" fxLayout="column">
+            <mat-form-field [hideRequiredMarker]="true">
+              <input
+                type="text"
+                matInput
+                formControlName="username"
+                autocomplete="username"
+                [placeholder]="'Username' | translate"
+                required
+              />
+              <mat-error *ngIf="loginForm.controls.username.invalid && loginForm.controls.username.touched">
+                <span translate>Username is required</span>
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field [hideRequiredMarker]="true">
+              <input
+                type="password"
+                matInput
+                formControlName="password"
+                autocomplete="current-password"
+                [placeholder]="'Password' | translate"
+                required
+              />
+              <mat-error *ngIf="loginForm.controls.password.invalid && loginForm.controls.password.touched">
+                <span translate>Password is required</span>
+              </mat-error>
+            </mat-form-field>
+            <br />
+            <button mat-raised-button class="login-button" type="submit" [disabled]="loginForm.invalid || isLoading">
+              <app-loader class="inline-loader" [isLoading]="isLoading"></app-loader>
+
+              <mat-icon inline>login</mat-icon>
+              <span translate>Login</span>
+            </button>
+          </div>
+        </form>
+      </mat-card>
+    </div>
+  </div>
+</div>

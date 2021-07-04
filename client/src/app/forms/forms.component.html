@@ -1,0 +1,153 @@
+<div class="container">
+  <mat-card class="container-card">
+    <mat-card-content class="container-card-content">
+      <mat-tab-group>
+        <mat-tab label="Apply Form">
+          <div class="containerX">
+            <div
+              class="coloredContainerX box"
+              fxLayout="row"
+              fxLayoutGap="1.5rem"
+              style="flex-direction: row; box-sizing: border-box; display: flex"
+            >
+              <div
+                fxFlex="67"
+                fxFlex.gt-sm="33"
+                class="extra-padding-4"
+                style="flex: 1 1 100%; box-sizing: border-box; max-width: 33%"
+              >
+                <mat-card>
+                  <mat-card-content>
+                    <form class="new-form">
+                      <table class="new-form-full-width" cellspacing="0">
+                        <tr>
+                          <td>
+                            <h1>New Form</h1>
+                          </td>
+                          <td class="zero-padding">
+                            <button mat-icon-button aria-label="Clear Icon" class="float-right">
+                              <mat-icon>clear</mat-icon>
+                            </button>
+                          </td>
+                        </tr>
+                      </table>
+
+                      <table class="new-form-full-width" cellspacing="0">
+                        <tr>
+                          <td>
+                            <mat-form-field appearance="legacy" class="new-form-full-width">
+                              <mat-label>Form Title</mat-label>
+                              <input matInput />
+                            </mat-form-field>
+                          </td>
+                        </tr>
+                      </table>
+
+                      <p>
+                        <mat-form-field appearance="legacy" class="new-form-full-width">
+                          <mat-label>Choose an option</mat-label>
+                          <mat-select>
+                            <mat-option value="option1">Form Type 1</mat-option>
+                            <mat-option value="option2">Form Type 2</mat-option>
+                            <mat-option value="option3">Form Type 2</mat-option>
+                          </mat-select>
+                        </mat-form-field>
+                      </p>
+
+                      <p>
+                        <mat-form-field appearance="legacy" class="new-form-full-width">
+                          <mat-label>Any Questions</mat-label>
+                          <textarea
+                            matInput
+                            placeholder="e.g. This form is actually for my this purpose"
+                            rows="5"
+                          ></textarea>
+                        </mat-form-field>
+                      </p>
+
+                      <p>
+                        <mat-form-field appearance="legacy" class="new-form-full-width">
+                          <mat-label>Form Description</mat-label>
+                          <textarea
+                            matInput
+                            placeholder="e.g. This form is actually for my this purpose"
+                            rows="8"
+                          ></textarea>
+                        </mat-form-field>
+                      </p>
+
+                      <p>
+                        <button mat-stroked-button class="new-form-full-width">Apply Form</button>
+                        <button mat-stroked-button class="new-form-full-width new-form-btn">Draft Form</button>
+                      </p>
+                    </form>
+                  </mat-card-content>
+                </mat-card>
+              </div>
+
+              <div
+                fxFlex="33"
+                fxFlex.gt-sm="67"
+                class="extra-padding-4"
+                style="flex: 1 1 100%; box-sizing: border-box; max-width: 67%"
+              >
+                <table mat-table [dataSource]="dataSource" class="mat-elevation-z3 draft-table-style">
+                  <ng-container matColumnDef="draftId">
+                    <th mat-header-cell *matHeaderCellDef translate>Draft Id</th>
+                    <td mat-cell *matCellDef="let element">{{ element.draftId }}</td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="formTitle">
+                    <th mat-header-cell *matHeaderCellDef translate>Form Title</th>
+                    <td mat-cell *matCellDef="let element">{{ element.formTitle }}</td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="createdAt">
+                    <th mat-header-cell *matHeaderCellDef translate>Created At</th>
+                    <td mat-cell *matCellDef="let element">{{ element.createdAt }}</td>
+                  </ng-container>
+
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+                </table>
+
+                <section class="table-paginator">
+                  <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+                </section>
+              </div>
+            </div>
+          </div>
+        </mat-tab>
+
+        <mat-tab label="Forms List">
+          <div class="extra-padding-4">
+            <h2>My Forms</h2>
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z3">
+              <ng-container matColumnDef="draftId">
+                <th mat-header-cell *matHeaderCellDef translate>Draft Id</th>
+                <td mat-cell *matCellDef="let element">{{ element.draftId }}</td>
+              </ng-container>
+
+              <ng-container matColumnDef="formTitle">
+                <th mat-header-cell *matHeaderCellDef translate>Form Title</th>
+                <td mat-cell *matCellDef="let element">{{ element.formTitle }}</td>
+              </ng-container>
+
+              <ng-container matColumnDef="createdAt">
+                <th mat-header-cell *matHeaderCellDef translate>Created At</th>
+                <td mat-cell *matCellDef="let element">{{ element.createdAt }}</td>
+              </ng-container>
+
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+            </table>
+
+            <section class="table-paginator">
+              <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+            </section>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,67 @@
+<div class="container">
+  <mat-card class="container-card">
+    <mat-card-content>
+      <div fxFill fxLayout="row" fxLayoutAlign="end end" fxLayoutGap="1.5rem">
+        <button mat-raised-button color="warn" class="delete-user-button" (click)="onClick_DeleteUserButton()">
+          <mat-icon inline>person_remove</mat-icon>
+          <span translate>Delete User</span>
+        </button>
+
+        <button mat-raised-button color="accent" class="edit-user-button" (click)="onClick_EditUserButton()">
+          <mat-icon inline>edit</mat-icon>
+          <span translate>Edit User</span>
+        </button>
+
+        <button mat-raised-button color="primary" class="new-user-button" (click)="onClick_NewUserButton()">
+          <mat-icon inline>person_add_alt_1</mat-icon>
+          <span translate>New User</span>
+        </button>
+
+        <button mat-raised-button class="invite-user-button" (click)="onClick_InviteUserButton()">
+          <mat-icon inline>person_add</mat-icon>
+          <span translate>Invite User</span>
+        </button>
+      </div>
+      <br>
+
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z3">
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef translate> Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="username">
+          <th mat-header-cell *matHeaderCellDef translate> Username </th>
+          <td mat-cell *matCellDef="let element"> {{element.username}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef translate> Email </th>
+          <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="createdAt">
+          <th mat-header-cell *matHeaderCellDef translate> Created_At </th>
+          <td mat-cell *matCellDef="let element"> {{element.createdAt}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="isActive">
+          <th mat-header-cell *matHeaderCellDef translate> IsActive </th>
+          <td mat-cell *matCellDef="let element"> {{element.isActive}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="isAdmin">
+          <th mat-header-cell *matHeaderCellDef> IsAdmin </th>
+          <td mat-cell *matCellDef="let element"> {{element.isAdmin}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+      <section class="table-paginator">
+        <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+      </section>
+    </mat-card-content>
+  </mat-card>
+</div>
